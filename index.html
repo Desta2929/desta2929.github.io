@@ -21,7 +21,7 @@
     <div class="links">
       <a href="#home">መነሻ</a><a href="#faith">እምነት</a><a href="#bible">መጽሐፍ ቅዱስ</a>
       <a href="#feasts">በዓላት</a><a href="#saints">ቅዱሳን</a><a href="#media">ስብከት & ዜማ</a>
-      <a href="#about">ስለ ድረ-ገጹ</a>
+      <a href="#articles">ጽሑፎች</a><a href="#about">ስለ ድረ-ገጹ</a>
     </div>
   </nav>
 </header>
@@ -42,6 +42,22 @@
   <a href="#feasts"><span>🕯️</span><b>የበዓላት ቀን</b><small>የኢትዮጵያ ዓመት</small></a>
   <a href="#saints"><span>☦</span><b>ቅዱሳን</b><small>ሕይወትና ትምህርት</small></a>
   <a href="#media"><span>🎵</span><b>ዜማ & ስብከት</b><small>ያዳምጡ እና ይማሩ</small></a>
+</section>
+
+<section class="daily-feature">
+  <div class="container daily-grid">
+    <div>
+      <p class="kicker">የዕለቱ መንፈሳዊ ማሰላሰል</p>
+      <h2>በእምነት እንመላለስ</h2>
+      <p>የዕለቱን ጊዜ በጸሎት፣ በቃለ እግዚአብሔር ንባብ እና በመልካም ሥራ ለማሳለፍ እንዘጋጅ።</p>
+      <a class="btn primary" href="#bible">የመጽሐፍ ቅዱስ ክፍል</a>
+    </div>
+    <div class="reflection-card">
+      <span class="reflection-mark">✥</span>
+      <p>“በሁሉ እንደ ብርሃን እንመላለስ፤ በፍቅርና በትዕግሥት እንጽና።”</p>
+      <small>የዕለቱ ማሰላሰያ • መንፈሳዊ ማስታወሻ</small>
+    </div>
+  </div>
 </section>
 
 <section id="faith" class="section">
@@ -90,11 +106,32 @@
  </div></div>
 </section>
 
+<section id="articles" class="section articles-section">
+ <div class="container">
+  <div class="section-head"><span>05</span><div><p class="kicker">መንፈሳዊ ጽሑፎች</p><h2>ያንብቡ፣ ይማሩ፣ ያካፍሉ</h2></div></div>
+  <div class="search-box">
+    <input id="siteSearch" type="search" placeholder="ጽሑፎችን ፈልግ…" aria-label="ጽሑፎችን ፈልግ">
+    <span>⌕</span>
+  </div>
+  <div class="article-grid" id="articleGrid">
+    <article class="article-card" data-search="ጸሎት የጸሎት ኃይል ጸሎት">
+      <div class="article-number">01</div><p class="kicker">ጸሎት</p><h3>የጸሎት ሕይወትን እንዴት እናጠናክር?</h3><p>ጸሎትን በዕለታዊ ሕይወታችን ውስጥ በትእግሥት እና በትኩረት ለማካተት የሚረዱ አጠቃላይ ምክሮች።</p><a href="#">ያንብቡ →</a>
+    </article>
+    <article class="article-card" data-search="መጽሐፍ ቅዱስ ንባብ ጥናት">
+      <div class="article-number">02</div><p class="kicker">መጽሐፍ ቅዱስ</p><h3>የመጽሐፍ ቅዱስ ጥናት መጀመሪያ</h3><p>በየዕለቱ ንባብ ለመጀመር ቀላል የጥናት ልምድ እና ማስታወሻ ዘዴዎች።</p><a href="#bible">ያንብቡ →</a>
+    </article>
+    <article class="article-card" data-search="ቅዱሳን ሕይወት ምሳሌ">
+      <div class="article-number">03</div><p class="kicker">ቅዱሳን</p><h3>ከቅዱሳን ሕይወት የምንማረው</h3><p>የቅዱሳንን ሕይወት ስንማር እምነት፣ ትዕግሥት እና አገልግሎትን ለሕይወታችን ማስተላለፍ።</p><a href="#saints">ያንብቡ →</a>
+    </article>
+  </div>
+ </div>
+</section>
+
 <section class="newsletter"><div class="container"><div><p class="kicker">የመንፈሳዊ ይዘት ዝማኔ</p><h2>አዲስ ትምህርቶችን በኢሜይል ይቀበሉ</h2></div><form onsubmit="subscribe(event)"><input type="email" placeholder="የኢሜይል አድራሻ" required><button class="btn primary">ተመዝገብ</button></form></div></section>
 
 <section id="about" class="section about"><div class="container narrow"><p class="kicker">ስለ ዘተዋሕዶ</p><h2>ለእምነት፣ ለትምህርት እና ለትውልድ</h2><p>Zetewahdo.com የኢትዮጵያ ኦርቶዶክስ ተዋሕዶ መንፈሳዊ ይዘትን በአማርኛ እና በእንግሊዝኛ ለማቅረብ የታቀደ የድረ-ገጽ መዋቅር ነው። ይዘቶች ከሚታመኑ የቤተ ክርስቲያን ምንጮች በማጣራት መቅረብ አለባቸው።</p></div></section>
 </main>
 
-<footer><div class="container footer-grid"><div><a class="brand" href="#"><span class="cross">✥</span><span><b>ዘተዋሕዶ</b><small>ZETEWAHDO</small></span></a><p>የተዋሕዶ እምነትና ትምህርት ለሁሉ።</p></div><div><h4>ፈጣን አገናኞች</h4><a href="#faith">እምነት</a><a href="#bible">መጽሐፍ ቅዱስ</a><a href="#feasts">በዓላት</a></div><div><h4>ይዘት</h4><a href="#saints">ቅዱሳን</a><a href="#media">ስብከት</a><a href="#media">ዜማ</a></div></div><div class="copyright">© 2026 Zetewahdo.com • ይዘት ከታመኑ ምንጮች በማጣራት ይቀርባል።</div></footer>
+<footer><div class="container footer-grid"><div><a class="brand" href="#"><span class="cross">✥</span><span><b>ዘተዋሕዶ</b><small>ZETEWAHDO</small></span></a><p>የተዋሕዶ እምነትና ትምህርት ለሁሉ።</p></div><div><h4>ፈጣን አገናኞች</h4><a href="#faith">እምነት</a><a href="#bible">መጽሐፍ ቅዱስ</a><a href="#feasts">በዓላት</a><a href="#articles">ጽሑፎች</a></div><div><h4>ይዘት</h4><a href="#saints">ቅዱሳን</a><a href="#media">ስብከት</a><a href="#media">ዜማ</a></div></div><div class="copyright">© 2026 Zetewahdo.com • ይዘት ከታመኑ ምንጮች በማጣራት ይቀርባል።</div></footer>
 <script src="script.js"></script>
 </body></html>

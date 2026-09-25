@@ -14,3 +14,20 @@ document.getElementById("langBtn").addEventListener("click",()=>{
     document.querySelector(".hero p").textContent="የእምነት፣ የመጽሐፍ ቅዱስ፣ የቅዱሳን፣ የበዓላት፣ የጸሎት፣ የስብከት እና የመንፈሳዊ ትምህርት ማዕከል።";
   }
 });
+
+const searchInput=document.getElementById("siteSearch");
+searchInput?.addEventListener("input",()=>{
+  const q=searchInput.value.trim().toLowerCase();
+  const cards=[...document.querySelectorAll(".article-card")];
+  let shown=0;
+  cards.forEach(card=>{
+    const match=!q || card.dataset.search.toLowerCase().includes(q) || card.innerText.toLowerCase().includes(q);
+    card.style.display=match?"block":"none";
+    if(match) shown++;
+  });
+  const grid=document.getElementById("articleGrid");
+  let empty=grid.querySelector(".no-results");
+  if(!shown){
+    if(!empty){empty=document.createElement("div");empty.className="no-results";empty.textContent="የፈለጉት ይዘት አልተገኘም።";grid.appendChild(empty);}
+  }else if(empty) empty.remove();
+});
