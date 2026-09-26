@@ -10,3 +10,20 @@
 .lang-en .hero h1,.lang-en .section-head h2,.lang-en .about h2,.lang-en .split h2,.lang-en .daily-feature h2{font-family:"Playfair Display",Arial,sans-serif}
 @media(max-width:850px){.article-grid{grid-template-columns:1fr 1fr}.daily-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.article-grid,.daily-grid{grid-template-columns:1fr}}
+
+/* Holy Cross article */
+.featured-article{border-top:4px solid #9a6725;background:linear-gradient(180deg,#fffaf0,#fff)}
+.read-article{margin-top:10px;border:0;background:none;color:#986322;font:700 15px inherit;cursor:pointer;padding:0}
+.read-article:hover{text-decoration:underline}
+.article-modal{display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;padding:24px}
+.article-modal.open{display:flex}
+.article-modal-backdrop{position:absolute;inset:0;background:rgba(25,8,5,.72)}
+.article-modal-panel{position:relative;z-index:1;width:min(900px,96vw);max-height:90vh;overflow:auto;background:#fffdf8;border:1px solid #d9c4a3;box-shadow:0 25px 70px rgba(0,0,0,.35);padding:45px 52px}
+.modal-close{position:absolute;right:16px;top:10px;border:0;background:none;color:#5a1111;font-size:36px;line-height:1;cursor:pointer}
+.article-modal-panel h2{font-family:"Playfair Display","Noto Sans Ethiopic",serif;color:#55100f;font-size:38px;line-height:1.3;margin:4px 0 25px}
+.article-body{font-size:16px;line-height:2;color:#40372f}
+.article-body h3{font-size:22px;color:#6d1715;margin:28px 0 8px;border-left:3px solid #a16c28;padding-left:12px}
+.article-body p{margin:0 0 16px}
+.source-note{background:#f7efe1;border-left:3px solid #a16c28;padding:12px 15px;font-size:13px;color:#756656;margin-top:25px}
+body.modal-open{overflow:hidden}
+@media(max-width:650px){.article-modal{padding:10px}.article-modal-panel{padding:38px 20px 28px;max-height:94vh}.article-modal-panel h2{font-size:29px}.article-body{font-size:15px;line-height:1.9}.article-body h3{font-size:19px}}

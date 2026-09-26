@@ -52,3 +52,34 @@ searchInput?.addEventListener('input', () => {
     empty.textContent = currentLang === 'en' ? 'No matching content found.' : 'የፈለጉት ይዘት አልተገኘም።';
   } else if (empty) empty.remove();
 });
+
+function openCrossArticle() {
+  const modal = document.getElementById('crossArticleModal');
+  if (!modal) return;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.classList.add('modal-open');
+  updateCrossArticleLanguage();
+}
+function closeCrossArticle() {
+  const modal = document.getElementById('crossArticleModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('modal-open');
+}
+function updateCrossArticleLanguage() {
+  const am = document.querySelector('[data-am-article]');
+  const en = document.querySelector('[data-en-article]');
+  if (!am || !en) return;
+  am.hidden = currentLang !== 'am';
+  en.hidden = currentLang !== 'en';
+}
+const originalApplyLanguage = applyLanguage;
+applyLanguage = function(lang) {
+  originalApplyLanguage(lang);
+  updateCrossArticleLanguage();
+};
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCrossArticle();
+});
